@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NewPrompt LearnCloud – Logowanie</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login">
+
+  <!-- Pływające kulki w tle -->
+  <div class="background-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <!-- (opcjonalnie) SVG sieci neuronowej -->
+  <img src="assets/tlo.svg" alt="Sieć neuronowa" class="background-net" />
+
+  <!-- Główna zawartość -->
+  <div class="login-container">
+    <img src="assets/logo.png" alt="Logo NewPrompt" class="logo" />
+    <h1> <span class="brand">NewPrompt LearnCloud</span></h1>
+    <p>Wpisz swój token dostępu:</p>
+    <input type="text" id="tokenInput" placeholder="np. AI2025" />
+    <button onclick="checkToken()">Zatwierdź</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <script src="js/token.js"></script>
+</body>
+</html>

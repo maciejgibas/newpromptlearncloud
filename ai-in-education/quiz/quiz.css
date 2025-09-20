@@ -1,0 +1,144 @@
+/* Styl ogólny strony */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #3b0a86, #5f27cd);
+  color: #fff;
+}
+
+/* Wrapper quizu */
+.quiz-wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+}
+
+/* Nagłówek */
+.quiz-wrapper h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Pytanie */
+.question-block {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.question-block h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.question-block label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+/* Poprawne/niepoprawne odpowiedzi */
+.correct {
+  background-color: rgba(0, 255, 0, 0.2);
+  border-left: 5px solid limegreen;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.incorrect {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-left: 5px solid red;
+  padding: 10px;
+  boborder-radius: 10px;
+}
+
+#submit-btn {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+#submit-btn:hover {
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.logo-glow {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #8e2de2) drop-shadow(0 0 20px #4a00e0);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-glow:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px #a064f5) drop-shadow(0 0 30px #8e2de2);
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
+.logo-container img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 15px #a855f7);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #a855f7);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px #c084fc);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #a855f7);
+  }
+}
+.retry-btn {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.retry-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}

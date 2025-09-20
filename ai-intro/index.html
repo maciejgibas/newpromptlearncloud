@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurs: Wprowadzenie do SI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="dashboard">
+
+  <!-- Efekt świetlistych blobów -->
+  <div class="background-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <!-- Główna zawartość -->
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Zawartość kursu</h2>
+      <ul id="lessonList">
+        <li onclick="loadLesson(0)" class="active">Wprowadzenie</li>
+        <li onclick="loadLesson(1)">Pierwsze kroki</li>
+        <li onclick="loadLesson(2)">Zakończenie</li>
+      </ul>
+    </aside>
+
+    <!-- Główna część lekcji -->
+    <main class="content">
+      <h1 id="lessonTitle">Kurs: Wprowadzenie do Sztucznej Inteligencji</h1>
+      <video id="videoPlayer" width="100%" controls>
+        <source src="intro.mp4" type="video/mp4" />
+        Twoja przeglądarka nie obsługuje wideo.
+      </video>
+      <div class="pdf-link">
+        <a id="pdfLink" href="intro.pdf" download>📄 pobierz skrypt (PDF)</a>
+      </div>
+      <div class="mark-done">
+        <input type="checkbox" id="markDone" onchange="toggleCompletion()" />
+        <label for="markDone">Oznacz jako ukończone</label>
+      </div>
+    </main>
+
+    <!-- Panel postępu -->
+    <aside class="info-panel">
+      <h2>📊 Postęp</h2>
+      <p id="progressText">0% ukończono</p>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+
+      <h2>📩 Kontakt</h2>
+      <a href="mailto:trener@newprompt.pl" class="contact-button">Skontaktuj się z trenerem</a>
+    </aside>
+  </div>
+
+  <!-- Pasek dolny -->
+  <footer class="bottom-bar">
+    <img src="../assets/logo.png" alt="Logo NewPrompt" class="footer-logo" />
+    <span class="footer-text">NewPrompt LearnCloud</span>
+  </footer>
+
+  <script src="lessons.js"></script>
+  <script src="lesson-progress.js"></script>
+</body>
+</html>
